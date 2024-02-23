@@ -7,37 +7,46 @@ import Photo4 from "../../assets/images/photo4.jfif";
 import Photo5 from "../../assets/images/photo5.jfif";
 import { Link } from "react-router-dom";
 const ServicePages = () => {
+  const arr = [
+    {
+      id:1,
+      job: "Oral hygiene",
+      price:"50$",
+      timejob: "1 hour",
+      photo: `${Photo3}`,
+    },
+    {
+      id:2,
+      job: "Implants",
+      price:"120$",
+      timejob: "1 hour 30 minutes",
+      photo: `${Photo4}`,
+    },
+    {
+      id:3,
+      job: "Check up",
+      price:"140$",
+      timejob: "1 hour 12 minutes",
+      photo: `${Photo5}`,
+    },
+  ];
   const [colorClick2, setColorClick2] = useState(true);
-
   const trueClick2 = () => {
     if (!colorClick2) {
       setColorClick2(true);
     }
   };
-  const [select1, setSelect1] = useState(false);
-  const [select2, setSelect2] = useState(false);
-  const [select3, setSelect3] = useState(false);
-  const selectClick1 = () => {
-    if (!select1) {
-      setSelect1(true);
-      setSelect2(false);
-      setSelect3(false)
-    }
+  const [selectedItem,setSelectedItem]=useState(null)
+
+  const selectClick1 = (i) => {
+    sessionStorage.setItem("job",arr[i-1].job)
+    sessionStorage.setItem("price",arr[i-1].price)
+    setSelectedItem(i)
+  
+    
   };
-  const selectClick2 = () => {
-    if (!select2) {
-      setSelect2(true);
-      setSelect1(false);
-      setSelect3(false)
-    }
-  };
-  const selectClick3 = () => {
-    if (!select3) {
-      setSelect2(false);
-      setSelect1(false);
-      setSelect3(true)
-    }
-  };
+
+
   const historyClick = () => {
     window.history.back();
   };
@@ -91,69 +100,31 @@ const ServicePages = () => {
                 <hr />
               </div>
                 <div className={styles.users}>
+                  {arr.map((item)=>(
+
                   <div
                    style={{
-                    border: select1
+                    border: selectedItem==item.id
                       ? "2px solid #53D56C"
                       : "1px solid transparent",
                   }}
-                  onClick={selectClick1}
+                  onClick={()=>selectClick1(item.id)}
                   className={styles.flexsprice}>
                     <div className={styles.borders}>
                       <div className={styles.photos}>
-                        <img src={Photo3} alt="" />
+                        <img src={item.photo} alt="" />
                       </div>
                       <div className={styles.info}>
-                        <h2>Oral hygiene</h2>
-                        <h3>1 hour</h3>
+                        <h2>{item.job}</h2>
+                        <h3>{item.timejob}</h3>
                       </div>
                     </div>
                     <div className={styles.price}>
-                      <h2>50$</h2>
+                      <h2>{item.price}</h2>
                     </div>
                   </div>
-                  <div
-                   style={{
-                    border: select2
-                      ? "2px solid #53D56C"
-                      : "1px solid transparent",
-                  }}
-                  onClick={selectClick2}
-                  className={styles.flexsprice}>
-                    <div className={styles.borders}>
-                      <div className={styles.photos}>
-                        <img src={Photo4} alt="" />
-                      </div>
-                      <div className={styles.info}>
-                        <h2>Implants</h2>
-                        <h3>1 hour 30 minutes</h3>
-                      </div>
-                    </div>
-                    <div className={styles.price}>
-                      <h2>120$</h2>
-                    </div>
-                  </div>
-                  <div
-                   style={{
-                    border: select3
-                      ? "2px solid #53D56C"
-                      : "1px solid transparent",
-                  }}
-                  onClick={selectClick3}
-                  className={styles.flexsprice}>
-                    <div className={styles.borders}>
-                      <div className={styles.photos}>
-                        <img src={Photo5} alt="" />
-                      </div>
-                      <div className={styles.info}>
-                        <h2>Check up</h2>
-                        <h3>1 hour 12 minutes</h3>
-                      </div>
-                    </div>
-                    <div className={styles.price}>
-                      <h2>140$</h2>
-                    </div>
-                  </div>
+                  ))}
+              
                 </div>
              
              
@@ -163,7 +134,7 @@ const ServicePages = () => {
           <div className={styles.twoflex}>
             <div className={styles.onepage}></div>
             <div className={styles.twopage}>
-              {" "}
+           
               <div className={styles.rightbutton}>
                   <button
                     onClick={() => historyClick()}
@@ -171,7 +142,7 @@ const ServicePages = () => {
                   >
                     BACK
                   </button>
-                  {select1 || select2 || select3 ? (
+                  {selectedItem ? (
                     <Link to={"/dateandtime"}>NEXT</Link>
                   ) : (
                     <div>

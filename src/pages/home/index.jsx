@@ -7,28 +7,34 @@ import Photo2 from "../../assets/images/photo2.jfif";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const arr = [
+    {
+      id:1,
+      name: "Alex Rosetta",
+      email: "alexyrosetta@egmail.com",
+      photo: `${Photo1}`,
+    },
+    {
+      id:2,
+      name: "Maria July",
+      email: "mariajuly@egmail.com",
+      photo: `${Photo2}`,
+    },
+  ];
   const [colorClick1, setColorClick1] = useState(true);
-
   const trueClick1 = () => {
     if (!colorClick1) {
       setColorClick1(true);
     }
   };
-  const [select1, setSelect1] = useState(false);
-  const [select2, setSelect2] = useState(false);
-  const selectClick1 = () => {
-    if (!select1) {
-      setSelect1(true);
-      setSelect2(false);
-    }
-  };
-  const selectClick2 = () => {
-    if (!select2) {
-      setSelect2(true);
-      setSelect1(false);
-    }
+  const [selectedItem,setSelectedItem]=useState(null)
+  const selectClick1 = (i) => {
+    sessionStorage.setItem("name",arr[i-1].name)
+    sessionStorage.setItem("email",arr[i-1].email)
+    setSelectedItem(i)
   };
 
+  
   return (
     <div className={styles.background}>
       <div className={styles.controlbackgrounds}>
@@ -78,55 +84,37 @@ const Home = () => {
                 <hr />
               </div>
               <div className={styles.users}>
-                <div
-                  style={{
-                    border: select1
-                      ? "2px solid #53D56C"
-                      : "1px solid transparent",
-                  }}
-                  onClick={selectClick1}
-                  className={styles.borders}
-                >
-                  <div className={styles.photos}>
-                    <img src={Photo1} alt="" />
+                {arr.map((item) => (
+                  <div
+                    style={{
+                      border: selectedItem==item.id
+                        ? "2px solid #53D56C"
+                        : "1px solid transparent",
+                    }}
+                    onClick={()=>selectClick1(item.id)}
+                    className={styles.borders}
+                  >
+                    <div className={styles.photos}>
+                      <img src={item.photo} alt="" />
+                    </div>
+                    <div className={styles.info}>
+                      <h2>{item.name}</h2>
+                      <h3>{item.email}</h3>
+                    </div>
                   </div>
-                  <div className={styles.info}>
-                    <h2>Alex Rosetta</h2>
-                    <h3>alexyrosetta@egmail.com</h3>
-                  </div>
-                </div>
-                <div
-                  style={{
-                    border: select2
-                      ? "2px solid #53D56C"
-                      : "1px solid transparent",
-                  }}
-                  onClick={selectClick2}
-                  className={styles.borders}
-                >
-                  <div className={styles.photos}>
-                    <img src={Photo2} alt="" />
-                  </div>
-                  <div className={styles.info}>
-                    <h2>Maria July</h2>
-                    <h3>mariajuly@egmail.com</h3>
-                  </div>
-                </div>
+                ))}
               </div>
-
-          
             </div>
           </div>
           <div className={styles.twoflex}>
             <div className={styles.onepage}></div>
             <div className={styles.twopage}>
-              {" "}
+             
               <div className={styles.rightbutton}>
-                {select1 || select2 ? (
+                {selectedItem  ? (
                   <Link to={"/service"}>NEXT</Link>
                 ) : (
-                  <div>
-                  </div>
+                  <div></div>
                 )}
               </div>
             </div>

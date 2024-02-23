@@ -62,6 +62,15 @@ const DateTime = () => {
       setSelect1(false);
     }
   };
+  const calendarHandler=(e)=>{
+     sessionStorage.setItem("year",e.getFullYear())
+     sessionStorage.setItem("months",e.getMonth())
+     sessionStorage.setItem("day",e.getDate())
+  }
+  const timeHandler=()=>{
+    sessionStorage.setItem("time",value)
+    
+  }
   return (
     <div className={styles.background}>
       <div className={styles.controlbackgrounds}>
@@ -120,7 +129,7 @@ const DateTime = () => {
               </div>
               <div className={styles.calendar}>
                 <div onClick={selectClick1}>
-                  <Calendar className={styles.date} />
+                  <Calendar onChange={(e)=>calendarHandler(e)} className={styles.date} />
                 </div>
                 <div onClick={selectClick2}>
                   <TimePicker
@@ -144,7 +153,7 @@ const DateTime = () => {
                   BACK
                 </button>
                 {select1 && select2 ? (
-                  <Link to={"/confirmation"}>NEXT</Link>
+                  <Link onClick={()=>timeHandler()} to={"/confirmation"}>NEXT</Link>
                 ) : (
                   <div></div>
                 )}

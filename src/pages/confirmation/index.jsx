@@ -47,7 +47,12 @@ const Confirmation = () => {
   };
 
   const handleConfirmation = () => {
-    if (name.trim() === "" || lastName.trim() === "" || email.trim() === "" || phone.trim() === "") {
+    if (
+      name.trim() === "" ||
+      lastName.trim() === "" ||
+      email.trim() === "" ||
+      phone.trim() === ""
+    ) {
       setModalText("Please, fill all the required fields!");
       setShowModal(true);
     } else {
@@ -168,10 +173,24 @@ const Confirmation = () => {
               <div className={styles.formexample5}>
                 <label htmlFor="name">Note</label>
                 <div className={styles.note}>
-                  <h2>Staff: <span>Alexy Rosetta</span> </h2>
-                  <h2>Service: <span>Oral hygiene</span> </h2>
-                  <h2>Date: <span>2024-03-04 / 09:30-10:00</span> </h2>
-                  <h2>Price: <span className={styles.pricespan}>123$</span> </h2>
+                  <h2>
+                    Staff: <span>{sessionStorage.getItem("name")}</span>{" "}
+                  </h2>
+                  <h2>
+                    Service: <span>{sessionStorage.getItem("job")}</span>{" "}
+                  </h2>
+                  <h2>
+                    Date:{" "}
+                    <span>
+                      {sessionStorage.getItem("day")}-
+                      {sessionStorage.getItem("months")}-
+                      {sessionStorage.getItem("year")}-
+                      {sessionStorage.getItem("time")}
+                    </span>{" "}
+                  </h2>
+                  <h2>
+                    Price: <span className={styles.pricespan}>{sessionStorage.getItem("price")}</span>{" "}
+                  </h2>
                 </div>
               </div>
             </div>
@@ -180,7 +199,10 @@ const Confirmation = () => {
             <div className={styles.onepage}></div>
             <div className={styles.twopage}>
               <div className={styles.rightbutton}>
-                <button onClick={() => historyClick()} className={styles.button1}>
+                <button
+                  onClick={() => historyClick()}
+                  className={styles.button1}
+                >
                   BACK
                 </button>
 
@@ -193,7 +215,9 @@ const Confirmation = () => {
       {showModal && (
         <ModalOverlay
           onClose={() => setShowModal(false)}
-          isEmpty={name.trim() === "" || lastName.trim() === "" || email.trim() === ""}
+          isEmpty={
+            name.trim() === "" || lastName.trim() === "" || email.trim() === ""
+          }
           modalText={modalText}
         />
       )}

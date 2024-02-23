@@ -170,6 +170,9 @@
   font-family: "Poppins", sans-serif;
   font-size: 12px;
 }
+.background .controlbackgrounds .divsflex .rightbackground .users .borders:hover {
+  background: #f0f0f0;
+}
 .background .controlbackgrounds .divsflex .rightbackground .hrright hr {
   border: 1px solid #ffffff;
 }

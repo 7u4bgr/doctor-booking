@@ -38,7 +38,7 @@
   border: none;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
-  background: #6C70DC;
+  background: #6c70dc;
   color: white;
   padding: 8px 10px;
   border-radius: 50%;
@@ -144,6 +144,7 @@
   justify-content: space-between;
 }
 .background .controlbackgrounds .divsflex .rightbackground .users .flexsprice .borders {
+  background: #ffffff;
   display: flex;
   align-items: center;
   gap: 22px;

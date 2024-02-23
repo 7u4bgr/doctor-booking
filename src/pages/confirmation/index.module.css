@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  background-color: rgb(84, 0, 180);
+  height: 100vh;
+}
+.background .controlbackgrounds .divsflex {
+  display: flex;
+  height: 460px;
+}
+.background .controlbackgrounds .divsflex .leftbackground {
+  background: #292d32;
+  width: 30%;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext {
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 70px;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 13px;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext .a1 {
+  border: none;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  background: #6c70dc;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 50%;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext .a2 {
+  text-decoration: none;
+  color: white;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext1 {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 13px;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext1 .a1 {
+  border: none;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  background: #6c70dc;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 50%;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext1 .a2 {
+  text-decoration: none;
+  color: white;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext2 {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 13px;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext2 .a1 {
+  border: none;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  background: #6c70dc;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 50%;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext2 .a2 {
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext3 {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 13px;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext3 .a1 {
+  border: none;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  background: #4d545a;
+  color: white;
+  padding: 8px 13px;
+  border-radius: 50%;
+}
+.background .controlbackgrounds .divsflex .leftbackground .lefttext .controltext1 .numbertext3 .a2 {
+  text-decoration: none;
+  color: #626c76;
+}
+.background .controlbackgrounds .divsflex .leftbackground .hrleft hr {
+  border: 1px solid #ffffff;
+}
+.background .controlbackgrounds .divsflex .rightbackground {
+  background: #f5f7fa;
+  width: 70%;
+}
+.background .controlbackgrounds .divsflex .rightbackground .nav {
+  padding-left: 30px;
+  padding-top: 19px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.background .controlbackgrounds .divsflex .rightbackground .nav svg {
+  margin-right: 25px;
+}
+.background .controlbackgrounds .divsflex .rightbackground .hr {
+  padding-top: 14px;
+}
+.background .controlbackgrounds .divsflex .rightbackground .hr hr {
+  border: 1px solid #e3eaf3;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample {
+  padding-left: 30px;
+  padding-top: 25px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample1 {
+  display: flex;
+  gap: 9px;
+  flex-direction: column;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample1 label {
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample1 label span {
+  color: red;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample1 input {
+  padding: 15px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample3 {
+  display: flex;
+  gap: 9px;
+  padding-top: 25px;
+  flex-direction: column;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample3 label {
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample3 label span {
+  color: red;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample3 input {
+  padding: 15px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample2 {
+  padding-right: 30px;
+  display: flex;
+  gap: 9px;
+  flex-direction: column;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample2 label {
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample2 label span {
+  color: red;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample2 input {
+  padding: 15px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample4 {
+  padding-right: 30px;
+  display: flex;
+  gap: 9px;
+  padding-top: 25px;
+  flex-direction: column;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample4 label {
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample .formexample4 input {
+  padding: 15px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample5 {
+  padding-right: 30px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-top: 25px;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample5 label {
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample5 .note {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  font-size: 13px;
+  outline: none;
+  background-color: white;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample5 .note h2 {
+  color: #6C70DC;
+  font-family: "Poppins", sans-serif;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample5 .note h2 span {
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+.background .controlbackgrounds .divsflex .rightbackground .formexample5 .note h2 .pricespan {
+  color: #4FBF65;
+  font-weight: 600;
+}
+.background .controlbackgrounds .divsflex .rightbackground .hrright hr {
+  border: 1px solid #ffffff;
+}
+.background .controlbackgrounds .divsflex .rightbackground .rightbutton {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 44px;
+}
+.background .controlbackgrounds .divsflex .rightbackground .rightbutton .button1 {
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  background-color: #e3eaf3;
+  cursor: pointer;
+  border: none;
+  color: #8f9ca7;
+  padding: 9px 14px;
+}
+.background .controlbackgrounds .divsflex .rightbackground .rightbutton a {
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  background-color: #6c70dc;
+  border: none;
+  color: white;
+  padding: 9px 14px;
+}
+.background .controlbackgrounds .twoflex {
+  display: flex;
+}
+.background .controlbackgrounds .twoflex .onepage {
+  background: #292d32;
+  width: 30%;
+  height: 100px;
+  border-top: 1px solid #e3eaf3;
+}
+.background .controlbackgrounds .twoflex .twopage {
+  background: #ffffff;
+  width: 70%;
+  height: 100px;
+  border-top: 1px solid #e3eaf3;
+}
+.background .controlbackgrounds .twoflex .twopage .rightbutton {
+  display: flex;
+  justify-content: space-between;
+  padding: 33px 44px;
+}
+.background .controlbackgrounds .twoflex .twopage .rightbutton .button1 {
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  background-color: #e3eaf3;
+  cursor: pointer;
+  border: none;
+  color: #8f9ca7;
+  padding: 9px 14px;
+}
+.background .controlbackgrounds .twoflex .twopage .rightbutton a {
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  background-color: #6c70dc;
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+}/*# sourceMappingURL=index.module.css.map */

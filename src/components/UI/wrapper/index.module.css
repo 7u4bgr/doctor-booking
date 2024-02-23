@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.div {
+  width: 65%;
+  margin: auto;
+  padding-top: 180px;
+}/*# sourceMappingURL=index.module.css.map */

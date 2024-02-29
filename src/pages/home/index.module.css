@@ -138,6 +138,7 @@
   padding: 25px 30px;
 }
 .background .controlbackgrounds .divsflex .rightbackground .users .borders {
+  cursor: pointer;
   background: #ffffff;
   display: flex;
   align-items: center;

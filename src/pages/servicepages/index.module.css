@@ -148,6 +148,7 @@
   display: flex;
   align-items: center;
   gap: 22px;
+  cursor: pointer;
 }
 .background .controlbackgrounds .divsflex .rightbackground .users .flexsprice .borders .photos {
   padding-left: 20px;

@@ -313,3 +313,42 @@
     }
   }
 }
+@media(max-width:490px){
+  .background{
+    .controlbackgrounds{
+     .divsflex{
+      .leftbackground{
+         display: none;
+      }
+      .rightbackground{
+        width: 100%;
+        .formexample{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .formexample1{
+           width: 40%;
+          }
+          .formexample2{
+           width: 50%;
+          }
+          .formexample3{
+           width: 40%;
+          }
+          .formexample4{
+           width: 50%;
+          }
+        }
+      }
+     }
+     .twoflex{
+      .onepage{
+        display: none;
+      }
+      .twopage{
+        width: 100%;
+      }
+     }
+    }
+  }
+}

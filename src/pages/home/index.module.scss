@@ -213,3 +213,26 @@
     }
   }
 }
+@media(max-width:490px){
+  .background{
+    .controlbackgrounds{
+     .divsflex{
+      .leftbackground{
+         display: none;
+      }
+      .rightbackground{
+        width: 100%;
+      }
+     }
+     .twoflex{
+      .onepage{
+        display: none;
+      }
+      .twopage{
+        width: 100%;
+      }
+     }
+    }
+  }
+}
+

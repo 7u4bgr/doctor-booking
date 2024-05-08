@@ -194,3 +194,32 @@
     }
   }
 }
+@media(max-width:490px){
+  .background{
+    .controlbackgrounds{
+     .divsflex{
+      height: auto;
+      .leftbackground{
+         display: none;
+      }
+      .rightbackground{
+        width: 100%;
+        .calendar{
+          display: flex;
+          flex-direction: column;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+     }
+     .twoflex{
+      .onepage{
+        display: none;
+      }
+      .twopage{
+        width: 100%;
+      }
+     }
+    }
+  }
+}
